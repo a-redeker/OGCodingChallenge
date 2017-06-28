@@ -58,3 +58,6 @@ c:\users\aredeker\documents\visual studio 2015\Projects\CodeChallenge1_Wizard\Co
 c:\users\aredeker\documents\visual studio 2015\Projects\CodeChallenge1_Wizard\CodeChallenge1_Wizard\bin\Debug\ru\DevExpress.Xpf.LayoutControl.v16.1.resources.dll
 c:\users\aredeker\documents\visual studio 2015\Projects\CodeChallenge1_Wizard\CodeChallenge1_Wizard\obj\Debug\CodeChallenge1_Wizard.exe.licenses
 c:\users\aredeker\documents\visual studio 2015\Projects\CodeChallenge1_Wizard\CodeChallenge1_Wizard\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\aredeker\Documents\Visual Studio 2015\Projects\OGCodingChallenge\CodeChallenge1_Wizard\CodeChallenge1_Wizard\bin\Debug\CodeChallenge1_Wizard.exe.config
+C:\Users\aredeker\Documents\Visual Studio 2015\Projects\OGCodingChallenge\CodeChallenge1_Wizard\CodeChallenge1_Wizard\obj\Debug\CodeChallenge1_Wizard.exe
+C:\Users\aredeker\Documents\Visual Studio 2015\Projects\OGCodingChallenge\CodeChallenge1_Wizard\CodeChallenge1_Wizard\obj\Debug\CodeChallenge1_Wizard.pdb

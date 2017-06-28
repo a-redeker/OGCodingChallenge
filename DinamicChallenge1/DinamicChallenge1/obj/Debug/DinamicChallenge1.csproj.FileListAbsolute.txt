@@ -1,7 +1,0 @@
-C:\Users\aredeker\Documents\Visual Studio 2015\Projects\DinamicChallenge1\DinamicChallenge1\obj\Debug\MainWindow.baml
-C:\Users\aredeker\Documents\Visual Studio 2015\Projects\DinamicChallenge1\DinamicChallenge1\obj\Debug\MainWindow.g.cs
-C:\Users\aredeker\Documents\Visual Studio 2015\Projects\DinamicChallenge1\DinamicChallenge1\obj\Debug\Window1.g.cs
-C:\Users\aredeker\Documents\Visual Studio 2015\Projects\DinamicChallenge1\DinamicChallenge1\obj\Debug\App.g.cs
-C:\Users\aredeker\Documents\Visual Studio 2015\Projects\DinamicChallenge1\DinamicChallenge1\obj\Debug\DinamicChallenge1_MarkupCompile.cache
-C:\Users\aredeker\Documents\Visual Studio 2015\Projects\DinamicChallenge1\DinamicChallenge1\obj\Debug\DinamicChallenge1_MarkupCompile.lref
-C:\Users\aredeker\Documents\Visual Studio 2015\Projects\DinamicChallenge1\DinamicChallenge1\bin\Debug\DinamicChallenge1.exe.config

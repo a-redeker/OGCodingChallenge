@@ -1,0 +1,16 @@
+﻿<dx:DXWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+        xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" x:Class="DXApplication1.MainWindow"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Button Height="50" Width="200" Margin="277,135,40,134" Click="Button_Click_1">
+            Register
+        </Button>
+        <Button Height="50" Width="200" Margin="40,135,277,134" Click="Button_Click">
+            Diagnose
+        </Button>
+    </Grid>
+</dx:DXWindow>
