@@ -1,0 +1,89 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CodeChallenge1_Wizard"
+        xmlns:dxco="http://schemas.devexpress.com/winfx/2008/xaml/controls" 
+        xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" 
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" 
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
+        xmlns:Serialization="clr-namespace:DevExpress.Xpf.LayoutControl.Serialization;assembly=DevExpress.Xpf.LayoutControl.v16.1" 
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm" x:Class="CodeChallenge1_Wizard.WizardWindow"
+        mc:Ignorable="d"
+        Title="WizardWindow" Height="350" Width="525" DataContext="{dxmvvm:ViewModelSource Type={x:Type local:WizardWindowViewModel}}"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis" />
+    </Window.Resources>
+    <Grid>
+
+        <dxco:Wizard x:Name="wizard" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+            <dxco:Wizard.FooterTemplate>
+                <DataTemplate>
+                    <dxco:WizardDialogFooter>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="90"/>
+                                <ColumnDefinition Width="90"/>
+                                <ColumnDefinition Width="90"/>
+                                <ColumnDefinition Width="90"/>
+                                <ColumnDefinition Width="90"/>
+                            </Grid.ColumnDefinitions>
+                            <dxco:WizardButton Grid.Column="3" Content="Back" dxco:Wizard.IsButtonBack="True" />
+                            <dxco:WizardButton Grid.Column="4" Content="Next" dxco:Wizard.IsButtonNext="True" IsManipulationEnabled="True"/>
+                            <dxco:WizardButton Grid.Column="4" Content="Finish" dxco:Wizard.IsButtonFinish="True"/>
+                        </Grid>
+                    </dxco:WizardDialogFooter>
+                </DataTemplate>
+            </dxco:Wizard.FooterTemplate>
+            <dxco:WelcomeWizardPage Header="" Title="Please Enter A Range Of Numbers To Check:" Background="Bisque" ShowFinish="False">
+                <dxlc:LayoutControl HorizontalAlignment ="Stretch" VerticalAlignment="Stretch" Orientation="Vertical">
+                    <dxlc:LayoutItem Label="Lowest Number Checked: " VerticalAlignment="Center" Margin="125,0,125,0">
+                        <dxe:TextEdit Width="50" HorizontalAlignment="Left" Margin="50,0,0,0" EditValue="{Binding minCheck}" Text="1"/>
+                    </dxlc:LayoutItem>
+                    <dxlc:LayoutItem Label="Highest Number Checked: " VerticalAlignment="Center" Margin="125,0,125,0">
+                        <dxe:TextEdit Width="50" HorizontalAlignment="Left" Margin="50,0,0,0" EditValue="{Binding maxCheck}" Text="100"/>
+                    </dxlc:LayoutItem>
+                </dxlc:LayoutControl>
+            </dxco:WelcomeWizardPage>
+            <dxco:WizardPage Header="" Title="" Background="Aqua" ShowNext="{Binding finClicked}" ShowFinish="False">
+                <dxlc:LayoutControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <dxlc:LayoutControl VerticalAlignment="Stretch" >
+
+                        <dxlc:LayoutGroup dx:ScrollViewerTouchBehavior.IsEnabled="True" Orientation="Vertical" Serialization:SerializableItem.TypeName="LayoutGroup">
+
+                            <dxlc:LayoutItem Label="Multiples of: ">
+                                <dxe:TextEdit x:Name="multiplesInput" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,0,0,0" EditValue="{Binding multiple}" Text="1"/>
+                            </dxlc:LayoutItem>
+                            <dxlc:LayoutItem Label="Replace With: ">
+                                <dxe:TextEdit x:Name="replaceInput" HorizontalAlignment="Left" Width="100" EditValue="{Binding replace}" Text="Word"/>
+                            </dxlc:LayoutItem>
+                            <dxlc:LayoutGroup>
+                            <dxlc:LayoutItem>
+                                    <Button x:Name="addButton" Content="Add" Height="25" VerticalAlignment="Top" Width="75" Margin="0,0,0,0" Command="{Binding ListBoxPopulateCommand}"/>
+                                </dxlc:LayoutItem>
+                                <dxlc:LayoutItem>
+                                    <Button  x:Name="finButton" Content="Finish" Height="25" VerticalAlignment="Top" Width="75" Command="{Binding finBtnClickedCommand}" IsEnabled="{Binding addClicked}"/>
+                                </dxlc:LayoutItem>
+                            </dxlc:LayoutGroup>
+                        </dxlc:LayoutGroup>
+
+                        <dxlc:LayoutControl VerticalAlignment="Stretch">
+                            <dxlc:LayoutItem >
+                                <TextBlock x:Name="listBox" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="150" Background="#FFFBF7F7" Text="{Binding listDisp}" />
+                            </dxlc:LayoutItem>
+                        </dxlc:LayoutControl>
+
+                    </dxlc:LayoutControl>
+                </dxlc:LayoutControl>
+            </dxco:WizardPage>
+            <dxco:CompletionWizardPage Header="" Title="Let's Look At The Results:" Background="CadetBlue" ShowNext="False" ShowBack="False" >
+                
+                <TextBox x:Name="listBox1" Height="194" VerticalAlignment="Top" Width="491" Margin="0,10,0,0" Text="{Binding theString}" VerticalScrollBarVisibility="Auto"/>
+            </dxco:CompletionWizardPage>
+
+
+        </dxco:Wizard>
+    </Grid>
+</Window>

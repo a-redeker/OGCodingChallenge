@@ -1,0 +1,12 @@
+﻿<dx:DXWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm" xmlns:local="clr-namespace:CodeChallenge1_Wizard" x:Class="CodeChallenge1_Wizard.MainWindow"
+        Title="MainWindow" Height="350" Width="525" DataContext="{dxmvvm:ViewModelSource Type={x:Type local:MainWindowViewModel}}"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button x:Name="button" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Width="200" Height="50" Command="{Binding buttonPressCommand}" Content="Let's get started"/>
+    </Grid>
+</dx:DXWindow>
